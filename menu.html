@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <!-- Latest compiled and minified Bootstrap -->
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+       
+        <!-- Own CSS stylesheet -->
+        <link rel="stylesheet" href="common-styles.css">
+        
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <title> Pizza Castle | About Us </title>
+		
+		<style>
+			.names {
+				font-family: serif;
+				font-weight: 900;
+			}
+		</style>
+        
+    </head>
+    
+    <body>    
+        <nav class="navbar navbar-toggleable-md navbar-light bg-warning fixed-top">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color: #f3f5f6">  Pizza Castle  </a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" >HOME </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active bg-danger" href="about.html" style="color: aliceblue">MENU<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT</a>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+		
+		<div class="container">
+            <div class="row"> &nbsp; </div>
+            <div class="row"> &nbsp; </div>
+            <div class="row">  </div>
+        </div>
+		
+		<br>
+		
+		<h1>What would you like to order?</h1>
+		
+		<div class="row text-center">
+		
+			<div class="container col-lg-4">
+				<p class="bg-success"><em><strong>Cheese pizza</strong></em></p>
+				<img src="images/cheese.jpg" alt="cheese pizza" class="img-responsive container">
+				<a class="btn btn-primary container-fluid za1" href="#">Yes($20)</a>
+			</div>
+			
+			<div class="container col-lg-4">
+				<p class="bg-danger"><em><strong>Chicken pizza</strong></em></p>
+				<img src="images/chicken.jpg" alt="cheese pizza" class="img-responsive container" height="230px">
+				<a class="btn btn-primary container-fluid za2" href="#">Yes($30)</a>
+			</div>
+			
+			<div class="container col-lg-4">
+				<p class="bg-primary"><em><strong>Veg. pizza</strong></em></p>
+				<img src="images/veg.jpg" alt="cheese pizza" class="img-responsive container" height="230px">
+				<a class="btn btn-primary container-fluid za3" href="#">Yes($40)</a>
+			</div>
+			
+		</div>
+		<br>
+		<div class="container-fluid">
+			<input type="number" placeholder="Enter contact number" class="form-control col-lg-12">
+			<button type="button" class="btn btn-success col-lg-12 cost">Compute cost</button>
+		
+		</div>
+		<br>
+		<!-- FOOTER begins from here -->
+        <footer class="container-fluid jumbotron">
+            <div class="row col-lg-12">&copy; Compiled and Coded by: </div>
+            <div class="row">
+                <div class="col-lg-3 names">MD RAFI AKHTAR</div>
+                <div class="col-lg-9">
+                    <button class="btn btn-sm dropdown-toggle" id="rafisocial" data-toggle="dropdown"> Visit Me </button>
+                    <ul class="dropdown-menu" aria-labelled-by="rafisocial">
+                        <li><a href="https://www.facebook.com/rafi007akhtar" target="_blank" class="knowme btn">Facebook</a></li>
+                        <li><a href="https://github.com/rafi007akhtar/" target="_blank" class="knowme btn">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/md-rafi-akhtar-46283424/" target="_blank" class="knowme btn">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row col-lg-6">More info can be found in the&nbsp;<a href="" class="knowus">ABOUT US</a>&nbsp;section</div>
+            <br>
+            <h6 class="row col-lg-12 disclaimer">DISCLAIMER: </h6>
+            <div class="row col-lg-12 disclaimer col-xs-12">
+                All codes are written and compiled from scratch. The only libraries and frameworks used are&nbsp;<a href="https://github.com/jquery/jquery" class="knowus" target="_blank">jQuery</a>&nbsp;and&nbsp; <a href="https://github.com/twbs/bootstrap" class="knowus" target="_blank">Bootstrap.</a>&nbsp;No code has been plagiarised from elsewhere or otherwise. <br>
+            </div>
+            <div class="row col-lg-12 disclaimer col-xs-12">
+                The entire source-code of this open project can be found on the GitHub link posted in the&nbsp;<a href="index.html" class="knowus">HOME</a>&nbsp;page. <br>
+            </div>
+            <div class="row col-lg-12 disclaimer col-xs-12">
+                <u>Website made for a contest.</u>                
+            </div>
+        </footer>                
+                
+        <!-- Latest compiled and minified jQuery -->
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/3.1.1/jquery.js"></script>
+        <!-- Latest compiled and minified Bootstrap JS -->
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript" src="common-interactions.js"></script>
+		
+		<script>
+		
+			var cost = 0;
+			var msg = "";
+			$(".za1").on("click", function(event) {
+                console.log("success");
+				cost = cost + 20;
+            });
+			$(".za2").on("click", function(event) {
+                console.log("success");
+				cost = cost + 30;
+            });
+			$(".za3").on("click", function(event) {
+                console.log("success");
+				cost = cost + 40;
+            });
+
+			$(".cost").on("click", function(event) {
+						msg = "Your total cost is $"+cost+". Thanks for reaching out to us. You'll soon be contacted. Press OK to checkout";
+
+				console.log("success");
+                alert(msg);
+            });
+		</script>
+	</body>
+</html>
